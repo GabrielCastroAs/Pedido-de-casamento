@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quer casar comigo?</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      text-align: center;
+      padding-top: 100px;
+    }
+    h1 {
+      color: #333;
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+    .button-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+    .button {
+      display: inline-block;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 30px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .button-yes {
+      background-color: #53c68c;
+      color: white;
+    }
+    .button-no {
+      background-color: #e75c5c;
+      color: white;
+    }
+  </style>
+  <script>
+    function redirectToSapinhos() {
+      window.location.href = "sapinhos.html";
+    }
+    function moveNoButton() {
+      var buttonNo = document.getElementById("button-no");
+      var xPos = Math.floor(Math.random() * (window.innerWidth - buttonNo.offsetWidth));
+      var yPos = Math.floor(Math.random() * (window.innerHeight - buttonNo.offsetHeight));
+      buttonNo.style.transform = `translate(${xPos}px, ${yPos}px)`;
+    }
+  </script>
+</head>
+<body>
+  <h1>Quer casar comigo?</h1>
+  <div class="button-container">
+    <button id="button-yes" class="button" onclick="redirectToSapinhos()">Sim</button>
+    <button id="button-no" class="button button-no" onclick="moveNoButton()">Não</button>
+  </div>
+</body>
+</html>
